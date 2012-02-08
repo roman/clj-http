@@ -11,22 +11,10 @@
                  [commons-io "2.1"]
                  [slingshot "0.10.1"]
                  [cheshire "2.2.0"]]
-  ;; :multi-deps {"1.2.1" [[org.clojure/clojure "1.2.1"]
-  ;;                       [org.apache.httpcomponents/httpclient "4.1.2"]
-  ;;                       [org.apache.httpcomponents/httpmime "4.1.2"]
-  ;;                       [commons-codec "1.5"]
-  ;;                       [commons-io "2.1"]
-  ;;                       [slingshot "0.10.1"]
-  ;;                       [cheshire "2.2.0"]]
-  ;;              "1.4.0" [[org.clojure/clojure "1.4.0-beta1"]
-  ;;                       [org.apache.httpcomponents/httpclient "4.1.2"]
-  ;;                       [org.apache.httpcomponents/httpmime "4.1.2"]
-  ;;                       [commons-codec "1.5"]
-  ;;                       [commons-io "2.1"]
-  ;;                       [slingshot "0.10.1"]
-  ;;                       [cheshire "2.2.0"]]}
   :profiles {:dev {:dependencies [[ring/ring-jetty-adapter "1.0.2"]
-                                  [ring/ring-devel "1.0.2"]]}}
+                                  [ring/ring-devel "1.0.2"]]}
+             :1.2 {:dependencies [[org.clojure/clojure "1.2.1"]]}
+             :1.4 {:dependencies [[org.clojure/clojure "1.4.0-beta1"]]}}
   :test-selectors {:default  #(not (:integration %))
                    :integration :integration
                    :all (constantly true)}
